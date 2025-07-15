@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@font-face {
+    font-family: Regular;
+    src: url("./Fonts/fa-brands-400.woff2");
+}
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
