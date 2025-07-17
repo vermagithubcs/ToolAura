@@ -3,7 +3,7 @@ import React from 'react'
 const Choose = () => {
   return (
     <>
-    <div className="min-h-screen w-screen flex flex-col items-center justify-evenly px-6 py-16 bg-gray-200 text-black">
+    <div className="min-h-screen w-screen flex flex-col items-center justify-evenly px-6 py-16 border-b border-gray-300">
       <div className="text-center">
         <h1 className="text-4xl font-bold mb-4 ">Why Choose ToolAura🚀?</h1>
         <p className="text-lg mb-10 text-black relative top-4">

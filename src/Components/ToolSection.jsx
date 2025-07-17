@@ -5,11 +5,11 @@ import { useNavigate } from "react-router-dom";
 const ToolSection = () => {
   const navigate = useNavigate();
   return (
-    <div className="min-h-screen w-screen bg-white text-black relative top-10">
+    <div className="min-h-screen w-screen text-black relative top-10 border-b border-gray-300">
       <h1 className="text-center text-4xl">Productivity Section</h1>
       <div className="flex items-center justify-around h-[60vh] w-screen">
         {/* Text & Language Tools  */}
-        <section onClick={()=> navigate("/text-tools")} className="bg-gray-200 text-black rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-110">
+        <section className="bg-[#ffffff] text-slate-900 rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-110">
           <div className="flex items-center justify-center gap-2 mb-4">
             <h1 className="text-2xl font-semibold flex items-center gap-2">
               <span role="img" aria-label="text">
@@ -21,10 +21,10 @@ const ToolSection = () => {
 
           <div className="mb-4">
             <h2 className="text-lg font-medium mb-1">Features:</h2>
-            <ul className="list-disc list-inside space-y-1 font-sans text-[sm]">
-              <li className="cursor-pointer hover:text-[#6366f1]">📝World Counter</li>
-              <li className="cursor-pointer hover:text-[#6366f1]">🔠Case Converter</li>
-              <li className="cursor-pointer hover:text-[#6366f1]">🗣️Text to Speech</li>
+            <ul className="list-disc list-inside space-y-1 font-sans text-[sm] text-nowrap">
+              <li onClick={()=> navigate("/text-tools")} className="cursor-pointer hover:text-[#6366f1] w-36">📝Word Counter</li>
+              <li className="cursor-pointer hover:text-[#6366f1] w-36">🔠Case Converter</li>
+              <li className="cursor-pointer hover:text-[#6366f1] w-36">🗣️Text to Speech</li>
             </ul>
           </div>
 
@@ -48,15 +48,15 @@ const ToolSection = () => {
           </div>
         </section>
         {/* Image Tools  */}
-        <section className="bg-gray-200 text-black rounded-2xl h-96 p-6 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-110">
+        <section className="bg-[#ffffff] text-slate-900 h-[24rem] rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-110">
           <h1 className="text-xl font-sans text-center mb-4 flex items-center justify-center gap-2">
             <span className="text-2xl">🖼️</span>
             <strong>Image Tools</strong>
           </h1>
 
           <h2 className="font-medium">Features:</h2>
-          <ul className="list-disc list-inside text-[sm] mb-4">
-            <li className="cursor-pointer hover:text-[#6366f1]">🖼️Image Compressor</li>
+          <ul className="list-disc list-inside text-[sm] mb-4 text-nowrap">
+            <li className="cursor-pointer hover:text-[#6366f1] w-36">🖼️Image Compressor</li>
           </ul>
 
           <h2 className="font-medium">How To Use:</h2>
@@ -72,15 +72,15 @@ const ToolSection = () => {
           </ul>
         </section>
         {/* Developer Tools  */}
-        <section className="bg-gray-200 text-black rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-110">
+        <section className="bg-[#ffffff] text-slate-900 rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-110">
           <h1 className="text-2xl font-semibold text-center mb-4">
             💻 Developer Tools
           </h1>
 
           <h2 className="text-lg font-medium mb-1">Features:</h2>
-          <ul className="list-disc list-inside text-[sm] mb-4">
-            <li className="cursor-pointer hover:text-[#6366f1]">📄JSON Formatter</li>
-            <li className="cursor-pointer hover:text-[#6366f1]">🎨CSS Minifier</li>
+          <ul className="list-disc list-inside text-[sm] mb-4 text-nowrap">
+            <li className="cursor-pointer hover:text-[#6366f1] w-36">📄JSON Formatter</li>
+            <li className="cursor-pointer hover:text-[#6366f1] w-36">🎨CSS Minifier</li>
           </ul>
 
           <h2 className="text-lg font-medium mb-1">How to Use:</h2>
@@ -99,14 +99,14 @@ const ToolSection = () => {
       </div>
       <div className="flex items-center justify-around h-[60vh] w-screen">
         {/* Seo Tools  */}
-        <section className="bg-gray-200 text-black rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-110">
+        <section className="bg-[#ffffff] text-slate-900 rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-110">
           <h1 className="text-2xl font-semibold text-center mb-4">
             🔍 SEO Tools
           </h1>
 
           <h2 className="text-lg font-medium mb-1">Features:</h2>
-          <ul className="list-disc list-inside text-[sm] mb-4">
-            <li className="cursor-pointer hover:text-[#6366f1]">🏷️Meta Tag Generator</li>
+          <ul className="list-disc list-inside text-[sm] mb-4 text-nowrap">
+            <li className="cursor-pointer hover:text-[#6366f1] w-36">🏷️Meta Tag Generator</li>
           </ul>
 
           <h2 className="text-lg font-medium mb-1">How to Use:</h2>
@@ -123,15 +123,15 @@ const ToolSection = () => {
           </ul>
         </section>
         {/* Utility Tools  */}
-        <section className="bg-gray-200 text-black rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-110">
+        <section className="bg-[#ffffff] text-slate-900 rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-110">
           <h1 className="text-2xl font-semibold text-center mb-4">
             🛠️ Utility Tools
           </h1>
 
           <h2 className="text-lg font-medium mb-1">Features:</h2>
-          <ul className="list-disc list-inside text-[sm] mb-4">
-            <li className="cursor-pointer hover:text-[#6366f1]">🔐Password Generator</li>
-            <li className="cursor-pointer hover:text-[#6366f1]">📷QR Code Generator</li>
+          <ul className="list-disc list-inside text-[sm] mb-4 text-nowrap">
+            <li className="cursor-pointer hover:text-[#6366f1] w-36">🔐Password Generator</li>
+            <li className="cursor-pointer hover:text-[#6366f1] w-36">📷QR Code Generator</li>
           </ul>
 
           <h2 className="text-lg font-medium mb-1">How to Use:</h2>
@@ -149,14 +149,14 @@ const ToolSection = () => {
         </section>
 
         {/* Finance Tools */}
-        <section className="bg-gray-200 text-black rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-110">
+        <section className="bg-[#ffffff] text-slate-900 rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-110">
           <h1 className="text-2xl font-semibold text-center mb-4">
             💰 Finance Tools
           </h1>
 
           <h2 className="text-lg font-medium mb-1">Features:</h2>
-          <ul className="list-disc list-inside text-[sm] mb-4">
-            <li className="cursor-pointer hover:text-[#6366f1]">🧮GST Calculator</li>
+          <ul className="list-disc list-inside text-[sm] mb-4 text-nowrap">
+            <li className="cursor-pointer hover:text-[#6366f1] w-36">🧮GST Calculator</li>
           </ul>
 
           <h2 className="text-lg font-medium mb-1">How to Use:</h2>

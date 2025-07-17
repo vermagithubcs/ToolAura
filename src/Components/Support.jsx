@@ -3,7 +3,7 @@ import React from "react";
 const Support = () => {
   return (
     <>
-      <section className="h-[60vh] w-screen bg-gray-100 text-black">
+      <section className="h-[60vh] w-screen border-b border-gray-300">
         <div className="relative top-6 text-center px-4">
           <h2 className="text-4xl text-center font-bold">Support ToolAura</h2>
           <p className="text-lg relative top-2">
@@ -22,7 +22,7 @@ const Support = () => {
               href="https://www.buymeacoffee.com/yourusername"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-warning w-40 text-nowrap cursor-pointer"
+              className="btn btn-warning w-40 text-nowrap cursor-pointer hover:scale-110"
             >
               ☕ Buy Me a Coffee
             </a>

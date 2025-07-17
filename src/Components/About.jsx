@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <>
-      <div className="h-[40vh] w-screen bg-white text-black px-6 py-16 text-center border-b border-gray-400">
+      <div className="h-[40vh] w-screen px-6 py-16 text-center border-b border-gray-400">
         <h1 className="text-4xl font-bold relative top-8 mb-4">
           About ToolAura🚀
         </h1>

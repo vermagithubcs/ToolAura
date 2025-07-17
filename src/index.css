@@ -9,7 +9,13 @@
     text-decoration: none;
     list-style-type: none;
 }
+html{
+    scroll-behavior: smooth;
+}
 html,body{
     height: 100%;
     width: 100%;
+    background: #e0f2fe !important;  /* or your chosen color */
+    color: #1a1a1a;
+    font-family: 'Inter', sans-serif;
 }

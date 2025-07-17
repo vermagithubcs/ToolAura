@@ -8,41 +8,47 @@ import Footer from "./Components/Footer";
 import Support from "./Components/Support";
 import Contact from "./Components/Contact";
 
-
-import TextPage from "./Pages/ToolsPage/TextPage";
+import TextPage from "./Pages/ToolsPage/WordCounterPage";
 const Home = () => {
   return (
     <>
-      <div className="min-h-screen w-screen bg-white text-black">
-        {/* HeroSection Page  */}
-        <HeroSection />
-        {/* About Page  */}
-        <About />
-        {/* ToolSection page  */}
-        <ToolSection />
+      <div className="min-h-screen w-screen">
+        <section id="home">
+          {/* HeroSection Page  */}
+          <HeroSection />
+        </section>
+        <section id="about">
+          {/* About Page  */}
+          <About />
+        </section>
+        <section id="categories">
+          {/* ToolSection page  */}
+          <ToolSection />
+        </section>
         {/* Why choost Page  */}
         <Choose />
         {/* Supoort Page  */}
         <Support />
-        {/* Contact page  */}
-        <Contact />
+        <section id="contact">
+          {/* Contact page  */}
+          <Contact />
+        </section>
         {/* Footer page  */}
-        <Footer/>
+        <Footer />
       </div>
     </>
   );
 };
-const App = ()=>{
+const App = () => {
   return (
     <>
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path="/text-tools" element={<TextPage/>}/>
-
-    </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/text-tools" element={<TextPage />} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
-}
+  );
+};
 export default App;

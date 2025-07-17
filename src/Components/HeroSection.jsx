@@ -5,7 +5,7 @@ import Productivity2 from "../assets/Productive2.jpeg";
 const HeroSection = () => {
   return (
     <>
-      <div className="h-screen w-screen text-black border-b border-gray-400">
+      <div className="h-screen w-screen border-b border-gray-400">
         {/* Navar page  */}
         <Navbar />
         <div className="main flex">
@@ -18,7 +18,7 @@ const HeroSection = () => {
                 easily.
               </p>
               <button className="btn btn-primary w-40 h-10 text-xl text-nowrap">
-                Explore Now
+                <a href="#categories">Explore Now</a>
               </button>
             </div>
           </div>
