@@ -9,6 +9,8 @@ import Support from "./Components/Support";
 import Contact from "./Components/Contact";
 
 import TextPage from "./Pages/ToolsPage/WordCounterPage";
+import CaseConvertor from "./Pages/ToolsPage/CaseConverterPage";
+
 const Home = () => {
   return (
     <>
@@ -46,6 +48,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/text-tools" element={<TextPage />} />
+          <Route path="/case-converter" element={<CaseConvertor />} />
         </Routes>
       </BrowserRouter>
     </>

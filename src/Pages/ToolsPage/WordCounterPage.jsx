@@ -5,7 +5,7 @@ import WordCounter from "./WordCounter";
 const TextPage = () => {
   return (
     <>
-      <div className="h-[150vh] flex flex-col">
+      <div className="min-h-screen flex flex-col">
         <Navbar />
         <div className="flex-grow">
           <WordCounter />

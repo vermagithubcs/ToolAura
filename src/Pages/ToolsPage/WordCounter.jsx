@@ -1,29 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 
 const WordCounter = () => {
+  const [text, setText] = useState("");
+  const [wordCount, setWordCount] = useState(0);
+  const [charWithSpaces, setCharWithSpaces] = useState(0);
+
+  const calculateWordCount = (inputText) => {
+    const words = inputText.trim().split(/\s+/).filter(Boolean);
+    return words.length;
+  };
+
+  const handleChange = (e) => {
+    const newText = e.target.value;
+    setText(newText);
+    setCharWithSpaces(newText.length);
+    setWordCount(calculateWordCount(newText));
+  };
+
   return (
-    <>
-      <div className=" relative top-26 left-1/4 h-[75vh] w-1/2 rounded-2xl bg-[#ffffff] text-slate-900 overflow-hidden p-6">
-        <h1 className="text-center text-3xl font-sans text-black">Character Counter</h1>
-        <div className="text relative top-6 left-1/6">
-          <textarea className="bg-[#e0f2fe] p-2 font-sans text-xl border-2 rounded-2xl border-dashed" name="text" cols={40} rows={10}></textarea>
-        </div>
-        <div className="Characters relative top-12 left-1/4 bg-gray-200 flex items-center justify-around text-black w-80 h-32 rounded-xl p-2">
-          <div className="withspace w-32 h-20 flex flex-col items-center justify-around">
-            <h2 className="text-2xl font-bold">625</h2>
-            <p className="flex items-center justify-center text-nowrap h-7 w-28 rounded-xl bg-white text-blue-500 px-1">
-              With Spaces
-            </p>
+    <div className="flex items-center justify-center min-h-screen bg-sky-100 px-4">
+      <div className="w-full max-w-2xl rounded-2xl bg-white text-slate-900 p-6 shadow-lg">
+        <h1 className="text-center text-3xl font-bold text-black mb-6">
+          Character Counter
+        </h1>
+
+        <textarea
+          value={text}
+          onChange={handleChange}
+          className="w-full bg-blue-100 p-4 text-xl font-sans border-2 border-dashed border-blue-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-300 resize-none"
+          name="text"
+          rows={8}
+          placeholder="Type your text here..."
+        ></textarea>
+
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6">
+          <div className="flex flex-col items-center bg-gray-100 p-4 w-40 rounded-xl shadow-md">
+            <h2 className="text-2xl font-bold text-blue-700">{wordCount}</h2>
+            <p className="mt-2 text-sm font-medium text-blue-500">Word Count</p>
           </div>
-          <div className="withoutspace w-32 h-20 flex flex-col items-center justify-around">
-            <h2 className="text-2xl font-bold">625</h2>
-            <p className="flex items-center justify-center text-nowrap h-7 w-28 rounded-xl bg-white text-blue-500 px-1">
-              With Spaces
-            </p>
+          <div className="flex flex-col items-center bg-gray-100 p-4 w-40 rounded-xl shadow-md">
+            <h2 className="text-2xl font-bold text-blue-700">{charWithSpaces}</h2>
+            <p className="mt-2 text-sm font-medium text-blue-500">With Spaces</p>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

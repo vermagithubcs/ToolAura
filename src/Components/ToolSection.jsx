@@ -1,5 +1,5 @@
 import React from "react";
-import '../CSS/utility.css';
+import "../CSS/utility.css";
 import { useNavigate } from "react-router-dom";
 
 const ToolSection = () => {
@@ -7,48 +7,74 @@ const ToolSection = () => {
   return (
     <div className="min-h-screen w-screen text-black relative top-10 border-b border-gray-300">
       <h1 className="text-center text-4xl">Productivity Section</h1>
-      <div className="flex items-center justify-around h-[60vh] w-screen">
+      <div className="flex items-center justify-around h-[70vh] w-screen">
         {/* Text & Language Tools  */}
-        <section className="bg-[#ffffff] text-slate-900 rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-110">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <h1 className="text-2xl font-semibold flex items-center gap-2">
-              <span role="img" aria-label="text">
-                📑
-              </span>{" "}
-              Text & Language Tools
-            </h1>
-          </div>
-
-          <div className="mb-4">
-            <h2 className="text-lg font-medium mb-1">Features:</h2>
-            <ul className="list-disc list-inside space-y-1 font-sans text-[sm] text-nowrap">
-              <li onClick={()=> navigate("/text-tools")} className="cursor-pointer hover:text-[#6366f1] w-36">📝Word Counter</li>
-              <li className="cursor-pointer hover:text-[#6366f1] w-36">🔠Case Converter</li>
-              <li className="cursor-pointer hover:text-[#6366f1] w-36">🗣️Text to Speech</li>
-            </ul>
-          </div>
-
-          <div className="mb-4">
-            <h2 className="text-lg font-medium mb-1">How To Use:</h2>
-            <p className="text-sm">
-              Enter your words, case convert them, and convert to speech in any
-              language!
+        <section className="bg-[#ffffff] text-slate-900 rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duration-600 hover:scale-105 border-2 border-black h-[55vh]">
+          {/* Blurred Coming Soon Overlay */}
+          {/* <div className="absolute inset-0 z-10 bg-white/60 backdrop-blur-sm flex items-center justify-center rounded-2xl">
+            <p className="text-2xl font-bold text-gray-700 animate-pulse">
+              🚧 Coming Soon...
             </p>
-          </div>
+          </div> */}
 
-          <div>
-            <h2 className="text-lg font-medium mb-1">
-              Key Features and Benefits:
-            </h2>
-            <ul className="list-decimal list-inside text-[sm] space-y-1">
-              <li>All-in-one tools website</li>
-              <li>Simple to use</li>
-              <li>Easy to understand and fast working</li>
-            </ul>
+          {/* Actual Content */}
+          <div className="relative z-0">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <h1 className="text-2xl font-semibold flex items-center gap-2">
+                <span role="img" aria-label="text">
+                  📑
+                </span>{" "}
+                Text & Language Tools
+              </h1>
+            </div>
+
+            <div className="mb-4">
+              <h2 className="text-lg font-medium mb-1">Features:</h2>
+              <ul className="list-disc list-inside space-y-1 font-sans text-[sm] text-nowrap">
+                <li
+                  onClick={() => navigate("/text-tools")}
+                  className="cursor-pointer hover:text-[#6366f1] w-36"
+                >
+                  📝Word Counter
+                </li>
+                <li onClick={() => navigate("/case-converter")} className="cursor-pointer hover:text-[#6366f1] w-36">
+                  🔠Case Converter
+                </li>
+                <li className="cursor-pointer hover:text-[#6366f1] w-36">
+                  🗣️Text to Speech
+                </li>
+              </ul>
+            </div>
+
+            <div className="mb-4">
+              <h2 className="text-lg font-medium mb-1">How To Use:</h2>
+              <p className="text-sm">
+                Enter your words, case convert them, and convert to speech in
+                any language!
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-lg font-medium mb-1">
+                Key Features and Benefits:
+              </h2>
+              <ul className="list-decimal list-inside text-[sm] space-y-1">
+                <li>All-in-one tools website</li>
+                <li>Simple to use</li>
+                <li>Easy to understand and fast working</li>
+              </ul>
+            </div>
           </div>
         </section>
+
         {/* Image Tools  */}
-        <section className="bg-[#ffffff] text-slate-900 h-[24rem] rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-110">
+        <section className="relative bg-[#ffffff] text-slate-900 h-[55vh] rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-105 border-2 border-black">
+          {/* Blurred Coming Soon Overlay */}
+          <div className="absolute inset-0 z-10 bg-white/60 backdrop-blur-sm flex items-center justify-center rounded-2xl">
+            <p className="text-2xl font-bold text-gray-700 animate-pulse">
+              🚧 Coming Soon...
+            </p>
+          </div>
           <h1 className="text-xl font-sans text-center mb-4 flex items-center justify-center gap-2">
             <span className="text-2xl">🖼️</span>
             <strong>Image Tools</strong>
@@ -56,7 +82,9 @@ const ToolSection = () => {
 
           <h2 className="font-medium">Features:</h2>
           <ul className="list-disc list-inside text-[sm] mb-4 text-nowrap">
-            <li className="cursor-pointer hover:text-[#6366f1] w-36">🖼️Image Compressor</li>
+            <li className="cursor-pointer hover:text-[#6366f1] w-36">
+              🖼️Image Compressor
+            </li>
           </ul>
 
           <h2 className="font-medium">How To Use:</h2>
@@ -72,15 +100,25 @@ const ToolSection = () => {
           </ul>
         </section>
         {/* Developer Tools  */}
-        <section className="bg-[#ffffff] text-slate-900 rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-110">
+        <section className="relative bg-[#ffffff] text-slate-900 rounded-2xl p-5 h-[55vh] w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-105 border-2 border-black">
+          {/* Blurred Coming Soon Overlay */}
+          <div className="absolute inset-0 z-10 bg-white/60 backdrop-blur-sm flex items-center justify-center rounded-2xl">
+            <p className="text-2xl font-bold text-gray-700 animate-pulse">
+              🚧 Coming Soon...
+            </p>
+          </div>
           <h1 className="text-2xl font-semibold text-center mb-4">
             💻 Developer Tools
           </h1>
 
           <h2 className="text-lg font-medium mb-1">Features:</h2>
           <ul className="list-disc list-inside text-[sm] mb-4 text-nowrap">
-            <li className="cursor-pointer hover:text-[#6366f1] w-36">📄JSON Formatter</li>
-            <li className="cursor-pointer hover:text-[#6366f1] w-36">🎨CSS Minifier</li>
+            <li className="cursor-pointer hover:text-[#6366f1] w-36">
+              📄JSON Formatter
+            </li>
+            <li className="cursor-pointer hover:text-[#6366f1] w-36">
+              🎨CSS Minifier
+            </li>
           </ul>
 
           <h2 className="text-lg font-medium mb-1">How to Use:</h2>
@@ -99,14 +137,22 @@ const ToolSection = () => {
       </div>
       <div className="flex items-center justify-around h-[60vh] w-screen">
         {/* Seo Tools  */}
-        <section className="bg-[#ffffff] text-slate-900 rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-110">
+        <section className="relative bg-[#ffffff] text-slate-900 h-[55vh] rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-105 border-2 border-black">
+          {/* Blurred Coming Soon Overlay */}
+          <div className="absolute inset-0 z-10 bg-white/60 backdrop-blur-sm flex items-center justify-center rounded-2xl">
+            <p className="text-2xl font-bold text-gray-700 animate-pulse">
+              🚧 Coming Soon...
+            </p>
+          </div>
           <h1 className="text-2xl font-semibold text-center mb-4">
             🔍 SEO Tools
           </h1>
 
           <h2 className="text-lg font-medium mb-1">Features:</h2>
           <ul className="list-disc list-inside text-[sm] mb-4 text-nowrap">
-            <li className="cursor-pointer hover:text-[#6366f1] w-36">🏷️Meta Tag Generator</li>
+            <li className="cursor-pointer hover:text-[#6366f1] w-36">
+              🏷️Meta Tag Generator
+            </li>
           </ul>
 
           <h2 className="text-lg font-medium mb-1">How to Use:</h2>
@@ -123,15 +169,25 @@ const ToolSection = () => {
           </ul>
         </section>
         {/* Utility Tools  */}
-        <section className="bg-[#ffffff] text-slate-900 rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-110">
+        <section className="relative bg-[#ffffff] text-slate-900 rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-105 h-[55vh] border-2 border-black">
+          {/* Blurred Coming Soon Overlay */}
+          <div className="absolute inset-0 z-10 bg-white/60 backdrop-blur-sm flex items-center justify-center rounded-2xl">
+            <p className="text-2xl font-bold text-gray-700 animate-pulse">
+              🚧 Coming Soon...
+            </p>
+          </div>
           <h1 className="text-2xl font-semibold text-center mb-4">
             🛠️ Utility Tools
           </h1>
 
           <h2 className="text-lg font-medium mb-1">Features:</h2>
           <ul className="list-disc list-inside text-[sm] mb-4 text-nowrap">
-            <li className="cursor-pointer hover:text-[#6366f1] w-36">🔐Password Generator</li>
-            <li className="cursor-pointer hover:text-[#6366f1] w-36">📷QR Code Generator</li>
+            <li className="cursor-pointer hover:text-[#6366f1] w-36">
+              🔐Password Generator
+            </li>
+            <li className="cursor-pointer hover:text-[#6366f1] w-36">
+              📷QR Code Generator
+            </li>
           </ul>
 
           <h2 className="text-lg font-medium mb-1">How to Use:</h2>
@@ -149,14 +205,22 @@ const ToolSection = () => {
         </section>
 
         {/* Finance Tools */}
-        <section className="bg-[#ffffff] text-slate-900 rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-110">
+        <section className="relative bg-[#ffffff] text-slate-900 rounded-2xl p-5 w-full sm:w-96 shadow-md transition-transform duation-600 hover:scale-105 h-[55vh] border-2 border-black">
+          {/* Blurred Coming Soon Overlay */}
+          <div className="absolute inset-0 z-10 bg-white/60 backdrop-blur-sm flex items-center justify-center rounded-2xl">
+            <p className="text-2xl font-bold text-gray-700 animate-pulse">
+              🚧 Coming Soon...
+            </p>
+          </div>
           <h1 className="text-2xl font-semibold text-center mb-4">
             💰 Finance Tools
           </h1>
 
           <h2 className="text-lg font-medium mb-1">Features:</h2>
           <ul className="list-disc list-inside text-[sm] mb-4 text-nowrap">
-            <li className="cursor-pointer hover:text-[#6366f1] w-36">🧮GST Calculator</li>
+            <li className="cursor-pointer hover:text-[#6366f1] w-36">
+              🧮GST Calculator
+            </li>
           </ul>
 
           <h2 className="text-lg font-medium mb-1">How to Use:</h2>
