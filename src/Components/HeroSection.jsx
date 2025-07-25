@@ -27,11 +27,13 @@ const HeroSection = () => {
               className="h-80 rounded-xl absolute top-1/6 left-3/6 transition-transform duration-300 hover:scale-110"
               src={Productivity}
               alt="Image"
+              loading="lazy"
             />
             <img
               className="h-80 rounded-xl absolute bottom-0 top-1/2 left-3/4 transition-transform duration-300 hover:scale-110"
               src={Productivity2}
               alt="Image"
+              loading="lazy"
             />
           </div>
         </div>
