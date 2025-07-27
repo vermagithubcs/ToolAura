@@ -1,7 +1,6 @@
 import React from "react";
-import "../CSS/utility.css";
+import "../styles/global.css";
 import { Link } from "react-router-dom";
-
 const Navbar = () => {
   return (
     <>
@@ -12,7 +11,7 @@ const Navbar = () => {
           <Link to="/"><a>ToolAura🚀</a></Link>
         </h1>
         <ul className="flex items-center justify-evenly rounded-xl gap-8 text-xl relative right-16 border border-gray-400 bg-white shadow-md h-16 w-[40rem] font-sans font-semibold">
-          <li className="cursor-pointer hover:text-[#6366f1]">
+          <li className="cursor-pointer hover:text-[#6366f1] flex flex-col items-center">
             <a href="#home">Home</a>
           </li>
           <li className="cursor-pointer hover:text-[#6366f1]">

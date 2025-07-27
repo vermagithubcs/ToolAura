@@ -8,8 +8,8 @@ import Footer from "./Components/Footer";
 import Support from "./Components/Support";
 import Contact from "./Components/Contact";
 
-import TextPage from "./Pages/ToolsPage/WordCounterPage";
-import CaseConvertor from "./Pages/ToolsPage/CaseConverterPage";
+import TextPage from "./toolsData/WordCounterPage";
+import CaseConvertor from "./toolsData/CaseConverterPage";
 
 const Home = () => {
   return (
